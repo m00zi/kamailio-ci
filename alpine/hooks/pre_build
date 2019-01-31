@@ -19,7 +19,7 @@ refresh_builder() {
     fi
     sed -i -e "s/alpine:latest/alpine:${ALPINE_BRANCH}/" Dockerfile.builder
     docker build -t kamailio/kamailio-ci:builder-alpine.${ALPINE_BRANCH} --file Dockerfile.builder .
-    docker push kamailio/kamailio-ci:builder-alpine.${ALPINE_BRANCH}
+#    docker push kamailio/kamailio-ci:builder-alpine.${ALPINE_BRANCH}
 }
 
 echo "=> Refreshing builder image"
